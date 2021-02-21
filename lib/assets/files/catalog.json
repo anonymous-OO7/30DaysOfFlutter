@@ -1,0 +1,82 @@
+{
+    "products": [
+
+        {
+            "id" : 1,
+            "name" : "i phone 12 pro",
+            "desc" : "Apple i phone 12 th generation",
+            "price" : 1000,
+            "color" : "#33505a",
+            "image" : "https://m.economictimes.com/thumb/msid-78825344,width-1200,height-900,resizemode-4,imgsize-247196/to-spread-the-festive-season-cheer-the-good-folks-at-apple-have-introduced-attractive-deals-and-offers-for-those-who-wish-to-save-on-their-purchase-of-the-latest-iphone-.jpg"
+        },
+
+        {
+
+            "id" : 2,
+            "name" : "Pixel 5",
+            "desc" : "Google Pixel Phone 5th generation",
+            "price" : 1200,
+            "color" : "#e0bfae",
+            "image" : "https://www.notebookcheck.net/uploads/tx_nbc2/4_zu_3_Teaser_Google_Pixel_5.jpg"
+
+
+        },
+
+
+        {
+
+            "id" : 3,
+            "name" : "Galaxy s21",
+            "desc" : "Samsung Galaxt S21 2021 Edition",
+            "price" : 1200,
+            "color" : "#e0bfae",
+            "image" : "https://images.financialexpress.com/2021/01/s21ultramain1.jpg"
+
+
+        },
+
+        
+        {
+
+            "id" : 4,
+            "name" : "MacBook Air",
+            "desc" : "Apple Mac Book Air 2021 Edition",
+            "price" : 3000,
+            "color" : "#1c1c1c",
+            "image" : "https://telecomtalk.info/wp-content/uploads/2021/01/macbook-air-2021-thinner-magsafe.jpg"
+
+
+        },
+        
+        {
+
+            "id" : 5,
+            "name" : "MacBook Pro",
+            "desc" : "Apple Mac Book Pro 2021 Edition",
+            "price" : 3050,
+            "color" : "#544ee4",
+            "image" : "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F02%2Fapple-macbook-pro-magsafe-ports-touch-bar-update-rumors-000.jpg?w=960&cbr=1&q=90&fit=max"
+
+        },
+
+        
+        {
+
+            "id" : 6,
+            "name" : "Galaxy S21 Ultra",
+            "desc" : "Samsung Galaxy S21 Ultra 2021 Edition",
+            "price" : 2999,
+            "color" : "#1c1c1c",
+            "image" : "https://i.ytimg.com/vi/tRb_O9XLaIQ/sddefault.jpg"
+        }
+
+
+
+
+
+
+
+    ]
+
+
+}
