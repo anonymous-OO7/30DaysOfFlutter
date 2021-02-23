@@ -1,7 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:helloflutter/Pages/home_widgets/catalog_header.dart';
+import 'package:helloflutter/Pages/home_widgets/catalog_list.dart';
 import 'dart:convert';
 import 'package:helloflutter/models/catalog.dart';
 import 'package:helloflutter/widgets/drawer.dart';
@@ -39,109 +39,27 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
     return Scaffold(
-        body: SafeArea(
-            child: Container(
-                padding: Vx.m32,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CatalogHeader(),
-                    if (CatalogModel.items != null &&
-                        CatalogModel.items.isNotEmpty)
-                      CatalogList().expand()
-                    else
-                      Center(
-                        child: CircularProgressIndicator(),
-                      )
-                  ],
-                ))),
-              //  drawer: MyDrawer(),
-                );
-  }
-}
-
-class CatalogHeader extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        "Catalog App".text.xl5.bold.color(Colors.blue).make(),
-        "Trending Products".text.xl3.make(),
-      ],
-    );
-  }
-}
-
-class CatalogList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: CatalogModel.items.length,
-      itemBuilder: (context, index) {
-        final catalog = CatalogModel.items[index];
-        return CatalogItem(catalog: catalog);
-      },
-    );
-  }
-}
-
-class CatalogItem extends StatelessWidget {
-  final Item catalog;
-
-  const CatalogItem({Key key, @required this.catalog})
-      : assert(catalog != null),
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return VxBox(
-        child: Row(
-      children: [
-        CatalogImage(image: catalog.image),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              catalog.name.text.lg.color(Colors.brown).bold.make(),
-              catalog.desc.text.textStyle(context.captionStyle).make(),
-              10.heightBox,
-              ButtonBar(
-                alignment: MainAxisAlignment.spaceBetween,
-                buttonPadding: Vx.mH8,
+      body: SafeArea(
+          child: Container(
+              padding: Vx.m32,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  "\$${catalog.price}".text.bold.xl.make(),
-                  ElevatedButton(onPressed: (){},
-                  style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.greenAccent)
-                  ),
-
-                  //shape:MaterialStateProperty.all(StadiumBorder()),
-                   child: "BUY".text.make(),)
+                  CatalogHeader(),
+                  if (CatalogModel.items != null &&
+                      CatalogModel.items.isNotEmpty)
+                    CatalogList().py16().expand()
+                  else
+                    Center(
+                      child: CircularProgressIndicator().centered().expand(),
+                    )
                 ],
-              )
-            ],
-          ),
-        )
-      ],
-    )).blue100.roundedLg.square(130).make().py16();
+              ))),
+      //  drawer: MyDrawer(),
+    );
   }
 }
 
-class CatalogImage extends StatelessWidget {
-  final String image;
 
-  const CatalogImage({Key key, @required this.image}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Image.network(image)
-        .box
-        .rounded
-        .p8
-        .color(Colors.amberAccent)
-        .make()
-        .p16()
-        .w40(context);
-  }
-}
+
+
