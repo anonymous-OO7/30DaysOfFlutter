@@ -5,7 +5,7 @@ import 'package:helloflutter/Pages/home_widgets/catalog_list.dart';
 import 'dart:convert';
 import 'package:helloflutter/models/catalog.dart';
 import 'package:helloflutter/widgets/drawer.dart';
-import 'package:helloflutter/widgets/item_widget.dart';
+//import 'package:helloflutter/widgets/item_widget.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(Duration(seconds: 4));
+    await Future.delayed(Duration(seconds: 6));
     final catalogJson =
         await rootBundle.loadString("lib/assets/files/catalog.json");
     //print(catalogJson);
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
     // final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
     return Scaffold(
       body: SafeArea(
-          child: Container(
+           child:Container(
               padding: Vx.m32,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                     )
                 ],
               ))),
-      //  drawer: MyDrawer(),
+       drawer: MyDrawer(),
     );
   }
 }

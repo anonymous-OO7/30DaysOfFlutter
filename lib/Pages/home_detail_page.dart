@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloflutter/models/catalog.dart';
+import 'package:helloflutter/widgets/drawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeDetailPage extends StatelessWidget {
@@ -33,9 +34,9 @@ class HomeDetailPage extends StatelessWidget {
                 ],
 
 
-      ).wh(150, 70),
+       ).wh(150, 70),
 
-    ),
+      ),
       
       body:SafeArea(
         bottom: false,
@@ -64,7 +65,8 @@ class HomeDetailPage extends StatelessWidget {
 
 
       ],),
-    ),
+     ),
+    drawer: MyDrawer(),
     );
   }
 }

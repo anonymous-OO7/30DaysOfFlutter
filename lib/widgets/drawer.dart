@@ -5,10 +5,10 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageUrl =
-        " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnerHb1yG495zGtyCLZ8Sfauc4n06RXsYtJg&usqp=CAU";
+        " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6PSb90rGnT4WTxYC7HBxNWs2Ig-mSP2b0g&usqp=CAU";
     return Drawer(
         child: Container(
-      color: Colors.deepPurple,
+      color: Colors.black,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -20,6 +20,7 @@ class MyDrawer extends StatelessWidget {
               accountName: Text("Gaurav"),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: NetworkImage(imageUrl),
+                //  backgroundImage: Image.asset("lib\assets\files\login-shield.png"),
               ),
             ),
           ),
